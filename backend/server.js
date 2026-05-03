@@ -111,9 +111,8 @@ app.post("/api/auth/send-otp", async (req, res) => {
     const nodemailer = require("nodemailer");
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      family: 4,
+      port: 587,
+      secure: false,
       auth: { user: process.env.MAIL_USER, pass: process.env.MAIL_PASS },
       tls: { rejectUnauthorized: false },
     });
@@ -1769,9 +1768,8 @@ app.patch("/api/admin/society-registrations/:id", auth, async (req, res) => {
       const nodemailer = require("nodemailer");
       const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
-        family: 4,
+        port: 587,
+        secure: false,
         auth: { user: process.env.MAIL_USER, pass: process.env.MAIL_PASS },
         tls: { rejectUnauthorized: false },
       });
@@ -1799,9 +1797,8 @@ app.patch("/api/admin/society-registrations/:id", auth, async (req, res) => {
       const nodemailer = require("nodemailer");
       const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
-        family: 4,
+        port: 587,
+        secure: false,
         auth: { user: process.env.MAIL_USER, pass: process.env.MAIL_PASS },
         tls: { rejectUnauthorized: false },
       });

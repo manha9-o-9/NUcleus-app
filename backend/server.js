@@ -113,6 +113,7 @@ app.post("/api/auth/send-otp", async (req, res) => {
       host: "smtp.gmail.com",
       port: 587,
       secure: false,
+      family: 4,
       auth: { user: process.env.MAIL_USER, pass: process.env.MAIL_PASS },
       tls: { rejectUnauthorized: false },
     });
@@ -1770,6 +1771,7 @@ app.patch("/api/admin/society-registrations/:id", auth, async (req, res) => {
         host: "smtp.gmail.com",
         port: 587,
         secure: false,
+        family: 4,
         auth: { user: process.env.MAIL_USER, pass: process.env.MAIL_PASS },
         tls: { rejectUnauthorized: false },
       });
@@ -1799,6 +1801,7 @@ app.patch("/api/admin/society-registrations/:id", auth, async (req, res) => {
         host: "smtp.gmail.com",
         port: 587,
         secure: false,
+        family: 4,
         auth: { user: process.env.MAIL_USER, pass: process.env.MAIL_PASS },
         tls: { rejectUnauthorized: false },
       });

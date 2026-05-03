@@ -3,7 +3,7 @@ const fs = require("fs");
 const bcrypt = require("bcryptjs");
 const initSqlJs = require("sql.js");
 
-const DB_PATH = path.join(__dirname, "nucleus.db");
+const DB_PATH = process.env.DB_PATH || path.join(__dirname, "nucleus.db");
 let db = null;
 
 // ── Persist to disk after every write ────────────────────────────────────────

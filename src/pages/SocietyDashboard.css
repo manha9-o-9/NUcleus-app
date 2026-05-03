@@ -1,0 +1,324 @@
+/* SocietyDashboard-specific additions */
+/* Shared base styles are imported from StudentHome.css in the JSX */
+
+/* Analytics reuse from AdminDashboard */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.stats-card {
+  background: rgba(12, 24, 33, 0.6);
+  border: 1px solid rgba(189, 217, 191, 0.08);
+  padding: 1.25rem;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  transition: border-color 0.2s ease;
+}
+
+.stats-card:hover {
+  border-color: rgba(189, 217, 191, 0.2);
+}
+
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #BDD9BF;
+}
+
+.stats-label {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 0.85rem;
+  color: #92898A;
+  letter-spacing: 1px;
+}
+
+.stats-value {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #BDD9BF;
+  text-shadow: 0 0 15px rgba(189, 217, 191, 0.3);
+}
+
+.stats-trend {
+  font-size: 0.85rem;
+  color: #4CAF50;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Nova Square', sans-serif;
+}
+
+.chart-container {
+  height: 160px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(189, 217, 191, 0.05) 50%, transparent 100%);
+  border-bottom: 2px solid rgba(189, 217, 191, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.chart-bar {
+  position: absolute;
+  bottom: 0;
+  width: 15px;
+  background: #16425B;
+  border-radius: 4px 4px 0 0;
+  transition: height 1s ease;
+}
+
+/* ---- Society Tab Shared ---- */
+.soc-tab-view {
+  width: 100%;
+}
+
+.soc-add-btn {
+  background: linear-gradient(135deg, #16425B, #685369) !important;
+  border-color: rgba(189, 217, 191, 0.3) !important;
+}
+
+.soc-add-btn:hover {
+  opacity: 0.85;
+}
+
+/* ---- Profile Tab ---- */
+.soc-profile-card {
+  background: rgba(12, 24, 33, 0.4);
+  border: 1px solid rgba(189, 217, 191, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.soc-profile-banner {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #16425B 0%, #685369 100%);
+}
+
+.soc-profile-body {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  gap: 1.5rem;
+}
+
+.soc-profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(189, 217, 191, 0.4);
+  margin-top: -50px;
+}
+
+.soc-profile-info h2 {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 1.2rem;
+  color: #BDD9BF;
+  margin: 0 0 0.25rem 0;
+}
+
+.soc-profile-info p {
+  font-size: 0.8rem;
+  color: #92898A;
+  margin: 0 0 0.5rem 0;
+}
+
+.soc-profile-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.soc-badge {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(22, 66, 91, 0.6);
+  border: 1px solid rgba(189, 217, 191, 0.2);
+  border-radius: 4px;
+  color: #BDD9BF;
+  font-family: 'Aldrich', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.soc-profile-stats {
+  display: flex;
+  border-top: 1px solid rgba(189, 217, 191, 0.07);
+  border-bottom: 1px solid rgba(189, 217, 191, 0.07);
+  padding: 1.25rem 2rem;
+  gap: 3rem;
+}
+
+.soc-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.soc-stat-value {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 1.5rem;
+  color: #BDD9BF;
+}
+
+.soc-stat-label {
+  font-size: 0.75rem;
+  color: #92898A;
+  letter-spacing: 1px;
+}
+
+.soc-bio-section {
+  padding: 1.5rem 2rem;
+}
+
+.soc-section-subtitle {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 0.85rem;
+  color: #92898A;
+  letter-spacing: 2px;
+  margin: 0 0 0.75rem;
+}
+
+.soc-bio-section p {
+  color: #BDD9BF;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  font-family: 'Nova Square', sans-serif;
+}
+
+/* ---- DNA Tab ---- */
+.soc-dna-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.soc-dna-card {
+  background: rgba(12, 24, 33, 0.4);
+  border: 1px solid rgba(189, 217, 191, 0.1);
+  border-radius: 14px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+}
+
+.soc-dna-card:hover {
+  border-color: rgba(189, 217, 191, 0.35);
+  transform: translateY(-4px);
+}
+
+.soc-dna-label {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 0.85rem;
+  color: #92898A;
+  letter-spacing: 2px;
+  margin: 0 0 0.9rem;
+}
+
+.soc-dna-card p {
+  color: #BDD9BF;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  font-family: 'Nova Square', sans-serif;
+  margin: 0;
+}
+
+.soc-dna-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #BDD9BF;
+  font-family: 'Nova Square', sans-serif;
+}
+
+.soc-dna-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(189, 217, 191, 0.06);
+  font-size: 0.9rem;
+}
+
+.soc-dna-list li:last-child {
+  border-bottom: none;
+}
+
+/* ---- Events & Recruit List ---- */
+.soc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.soc-list-item {
+  display: flex;
+  align-items: center;
+  background: rgba(12, 24, 33, 0.35);
+  border: 1px solid rgba(189, 217, 191, 0.08);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  gap: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.soc-list-item:hover {
+  border-color: rgba(189, 217, 191, 0.3);
+  background: rgba(22, 66, 91, 0.25);
+}
+
+.soc-list-thumb {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.soc-list-info h4 {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 0.95rem;
+  color: #BDD9BF;
+  margin: 0 0 0.2rem;
+}
+
+.soc-list-info p {
+  font-size: 0.8rem;
+  color: #92898A;
+  margin: 0;
+  font-family: 'Nova Square', sans-serif;
+}
+
+/* Reuse approve button style from AdminDashboard */
+.btn-approve {
+  display: flex;
+  align-items: center;
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  border-radius: 8px;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-approve:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Modal custom scrollbar */
+.modal-scroll::-webkit-scrollbar { width: 4px; }
+.modal-scroll::-webkit-scrollbar-track { background: transparent; }
+.modal-scroll::-webkit-scrollbar-thumb { background: rgba(32,178,170,.25); border-radius: 4px; }
+.modal-scroll::-webkit-scrollbar-thumb:hover { background: rgba(32,178,170,.45); }

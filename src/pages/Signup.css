@@ -1,0 +1,228 @@
+/* 
+Theme Variables:
+#2E4052 (Slate)
+#685369 (Purple)
+#0C1821 (Very Dark Blue)
+#16425B (Medium Dark Blue)
+#BDD9BF (Mint)
+#92898A (Grey-Rose)
+*/
+
+.auth-layout {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #2E4052 0%, #685369 100%);
+  padding: 1rem;
+  font-family: 'Nova Square', sans-serif;
+}
+
+.auth-card {
+  background: linear-gradient(to bottom, #172029 0%, #342934 100%);
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 620px;
+  box-shadow: 0 0 35px rgba(189, 217, 191, 0.25), inset 0 0 10px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar for a cleaner look if it does scroll */
+.auth-card::-webkit-scrollbar {
+  display: none;
+}
+
+.auth-card {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.auth-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  /* Increased to fit orbits */
+  margin-bottom: 0;
+  margin-top: 0;
+  /* Removed negative margin */
+  transform: scale(0.4);
+  /* Scaled back to be visible but full */
+  transform-origin: center;
+}
+
+.auth-title {
+  color: #BDD9BF;
+  /* Updated heading color */
+  font-family: 'Aldrich', sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  width: 100%;
+  /* Dramatically reduced gap between inputs from 1.5rem */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-align: left;
+  /* Tighter label-to-input gap */
+}
+
+.input-group label {
+  color: #BDD9BF;
+  /* Headings color as requested */
+  font-size: 0.8rem;
+  /* Slightly smaller labels to save vertical space */
+  font-weight: bold;
+  font-family: 'Aldrich', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.input-group input {
+  background-color: #92898A;
+  /* Input field background as requested */
+  border: 1px solid transparent;
+  color: #0C1821;
+  /* Dark text for contrast against grey-rose */
+  padding: 0.6rem 0.8rem;
+  /* Thinner inputs */
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: 'Nova Square', sans-serif;
+  transition: box-shadow 0.2s;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: rgba(12, 24, 33, 0.6);
+  /* Slightly transparent dark text */
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 0 2px rgba(189, 217, 191, 0.6);
+}
+
+/* Interests Section */
+.interests-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+  /* Tighter gap */
+  margin-top: 0;
+}
+
+.interests-section label {
+  color: #BDD9BF;
+  /* Headings color as requested */
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: 'Aldrich', sans-serif;
+  margin-bottom: 0px;
+}
+
+.sub-label {
+  font-size: 0.7rem;
+  font-family: 'Nova Square', sans-serif;
+  font-weight: normal;
+  opacity: 0.7;
+}
+
+.pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  /* Tighter pills */
+}
+
+.interest-pill {
+  background-color: transparent;
+  border: 1px solid #2E4052;
+  color: #92898A;
+  padding: 0.3rem 0.8rem;
+  /* Smaller pills */
+  border-radius: 20px;
+  font-family: 'Nova Square', sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.interest-pill:hover {
+  background-color: #16425B;
+  border-color: #BDD9BF;
+  color: #BDD9BF;
+}
+
+.interest-pill.active {
+  background-color: #16425B;
+  border-color: #BDD9BF;
+  color: #BDD9BF;
+  box-shadow: 0 0 8px rgba(189, 217, 191, 0.3);
+}
+
+/* Base button replacing standard blue in image with theme Mint/Slate */
+.submit-btn {
+  background-color: #BDD9BF;
+  color: #0C1821;
+  font-family: 'Aldrich', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0.7rem;
+  /* Reduced padding */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+  background-color: #A5C2A7;
+  /* Darker Mint */
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.auth-footer {
+  text-align: center;
+  color: #92898A;
+  font-size: 0.8rem;
+  margin-top: 0;
+}
+
+.auth-link {
+  color: #BDD9BF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}

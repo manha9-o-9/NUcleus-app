@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Nova+Square&family=Outfit:wght@600;800&display=swap');
+
+.landing-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #685369 0%, #2E4052 50%, #685369 100%);
+  font-family: 'Nova Square', sans-serif;
+}
+
+.landing-left-panel {
+  background: linear-gradient(135deg, #685369 0%, #2E4052 50%, #685369 100%);
+}
+
+.landing-left-panel .orbit-container {
+  transform: scale(0.55);
+  transform-origin: center;
+  margin-bottom: -40px;
+}
+
+.landing-auth-panel::-webkit-scrollbar { width: 4px; }
+.landing-auth-panel::-webkit-scrollbar-track { background: transparent; }
+.landing-auth-panel::-webkit-scrollbar-thumb { background: rgba(189,217,191,.2); border-radius: 4px; }
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 2rem;
+  z-index: 10;
+  justify-content: center;
+}
+
+.text-container {
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.typewriter-text {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  color: #BDD9BF;
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  max-width: 480px;
+}
+
+/* Prevent browser autofill from turning inputs white */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #0c1821 inset !important;
+  box-shadow: 0 0 0px 1000px #0c1821 inset !important;
+  background-color: #0c1821 !important;
+  caret-color: #fff !important;
+  border-color: rgba(189,217,191,.15) !important;
+  transition: background-color 0s ease-in-out 0s !important;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+  color: #BDD9BF;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .typewriter-text { font-size: 0.95rem; }
+  .landing-auth-panel { width: 100% !important; right: -100% !important; }
+  .landing-left-panel { width: 100% !important; }
+}
+
+.society-modal::-webkit-scrollbar { width: 6px; }
+.society-modal::-webkit-scrollbar-track { background: rgba(5,15,25,.8); border-radius: 4px; }
+.society-modal::-webkit-scrollbar-thumb { background: rgba(189,217,191,.25); border-radius: 4px; }
+.society-modal::-webkit-scrollbar-thumb:hover { background: rgba(189,217,191,.45); }

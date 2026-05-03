@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Nova+Square&family=Outfit:wght@600;800&display=swap');
+
+:root {
+  --bg-color: #2E4052;
+  --text-color: #BDD9BF;
+}
+
+/* ── OCEAN (default) ── */
+[data-theme="ocean"], body {
+  --theme-bg-from:        #0a1628;
+  --theme-bg-mid:         #0d2137;
+  --theme-bg-to:          #0a2e2e;
+  --theme-sidebar-bg:     rgba(5, 15, 25, 0.9);
+  --theme-sidebar-border: rgba(32, 178, 170, 0.1);
+  --theme-header-bg:      rgba(5, 15, 25, 0.5);
+  --theme-header-border:  rgba(32, 178, 170, 0.08);
+  --theme-panel-bg:       rgba(5, 15, 25, 0.7);
+  --theme-panel-border:   rgba(32, 178, 170, 0.1);
+  --theme-nav-active-bg:  rgba(32, 178, 170, 0.15);
+  --theme-nav-active-border: rgba(32, 178, 170, 0.3);
+  --theme-nav-active-color: #20B2AA;
+  --theme-nav-inactive:   rgba(168, 216, 216, 0.3);
+  --theme-accent:         #20B2AA;
+  --theme-accent-rgb:     32, 178, 170;
+  --theme-text-primary:   #a8d8d8;
+  --theme-text-secondary: rgba(168, 216, 216, 0.6);
+  --theme-text-muted:     rgba(168, 216, 216, 0.3);
+  --theme-logo-border:    #20B2AA;
+  --theme-logo-color:     #a8d8d8;
+  --theme-search-border:  rgba(32, 178, 170, 0.12);
+  --theme-search-placeholder: rgba(168, 216, 216, 0.3);
+  --theme-toggle-bg:      #0a2e2e;
+  --theme-stat4-bg:       rgba(186, 104, 200, 0.18);
+  --theme-stat4-border:   rgba(186, 104, 200, 0.45);
+  --theme-stat4-color:    #BA68C8;
+}
+
+/* ── DUSK ── */
+[data-theme="dusk"] {
+  --theme-bg-from:        #1a0f1a;
+  --theme-bg-mid:         #3d2440;
+  --theme-bg-to:          #1a0f1a;
+  --theme-sidebar-bg:     rgba(18, 6, 18, 0.88);
+  --theme-sidebar-border: rgba(240, 160, 200, 0.07);
+  --theme-header-bg:      rgba(18, 6, 18, 0.45);
+  --theme-header-border:  rgba(240, 160, 200, 0.07);
+  --theme-panel-bg:       rgba(18, 6, 18, 0.6);
+  --theme-panel-border:   rgba(240, 160, 200, 0.09);
+  --theme-nav-active-bg:  rgba(240, 160, 200, 0.10);
+  --theme-nav-active-border: rgba(240, 160, 200, 0.22);
+  --theme-nav-active-color: #f0a0c8;
+  --theme-nav-inactive:   rgba(232, 208, 232, 0.30);
+  --theme-accent:         #f0a0c8;
+  --theme-accent-rgb:     240, 160, 200;
+  --theme-text-primary:   #e8d0e8;
+  --theme-text-secondary: rgba(232, 208, 232, 0.55);
+  --theme-text-muted:     rgba(240, 160, 200, 0.25);
+  --theme-logo-border:    #f0a0c8;
+  --theme-logo-color:     #e8d0e8;
+  --theme-search-border:  rgba(240, 160, 200, 0.1);
+  --theme-search-placeholder: rgba(240, 160, 200, 0.3);
+  --theme-toggle-bg:      #4a2d52;
+  --theme-stat4-bg:       rgba(240, 160, 200, 0.18);
+  --theme-stat4-border:   rgba(240, 160, 200, 0.45);
+  --theme-stat4-color:    #f0a0c8;
+}
+
+/* ── EMBER ── */
+[data-theme="ember"] {
+  --theme-bg-from:        #150e08;
+  --theme-bg-mid:         #2e2010;
+  --theme-bg-to:          #150e08;
+  --theme-sidebar-bg:     rgba(12, 7, 3, 0.88);
+  --theme-sidebar-border: rgba(255, 179, 71, 0.07);
+  --theme-header-bg:      rgba(12, 7, 3, 0.45);
+  --theme-header-border:  rgba(255, 179, 71, 0.07);
+  --theme-panel-bg:       rgba(12, 7, 3, 0.6);
+  --theme-panel-border:   rgba(255, 179, 71, 0.09);
+  --theme-nav-active-bg:  rgba(255, 179, 71, 0.10);
+  --theme-nav-active-border: rgba(255, 179, 71, 0.22);
+  --theme-nav-active-color: #ffb347;
+  --theme-nav-inactive:   rgba(240, 217, 176, 0.30);
+  --theme-accent:         #ffb347;
+  --theme-accent-rgb:     255, 179, 71;
+  --theme-text-primary:   #f0d9b0;
+  --theme-text-secondary: rgba(240, 217, 176, 0.55);
+  --theme-text-muted:     rgba(255, 179, 71, 0.25);
+  --theme-logo-border:    #ffb347;
+  --theme-logo-color:     #f0d9b0;
+  --theme-search-border:  rgba(255, 179, 71, 0.1);
+  --theme-search-placeholder: rgba(255, 179, 71, 0.3);
+  --theme-toggle-bg:      #4a3010;
+  --theme-stat4-bg:       rgba(255, 179, 71, 0.18);
+  --theme-stat4-border:   rgba(255, 179, 71, 0.45);
+  --theme-stat4-color:    #ffb347;
+}
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nova Square', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+  /* Remove any default Vite background gradients */
+  background-image: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Aldrich', sans-serif;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}

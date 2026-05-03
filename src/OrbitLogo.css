@@ -1,0 +1,138 @@
+.orbit-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 40px auto;
+  perspective: 1000px; /* For 3D rotation of flat rings */
+}
+
+/* Base Flat Intersecting Ring Style */
+.ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #92898A; /* Gray orbits as requested */
+  /* Remove any glowing box shadow */
+  box-shadow: none; 
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+/* Specific Ring Rotations to Create Intersection */
+.ring-horizontal {
+  transform: rotateX(75deg); /* Start slightly tilted */
+  animation: rotate-ring-horizontal 12s linear infinite;
+  /* Preserve 3d so children (the star) can rotate against the parent */
+  transform-style: preserve-3d;
+}
+
+/* The Revolving Star */
+.orbiting-star {
+  position: absolute;
+  top: -12px; /* Positioned on the top edge of the ring */
+  left: 50%;
+  transform: translateX(-50%) rotateX(-90deg); /* Counter-rotate so it faces the screen, not flat on the ring */
+  width: 24px;
+  height: 24px;
+  background-color: #F1D471; /* Yellow from original reference */
+  /* CSS Star shape */
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  box-shadow: 0 0 10px rgba(241, 212, 113, 0.6);
+  z-index: 20;
+}
+
+.ring-diagonal-right {
+  transform: rotateX(60deg) rotateY(-45deg); /* Start tilted */
+  animation: rotate-ring-right 16s linear infinite reverse;
+}
+
+.ring-diagonal-left {
+  transform: rotateX(50deg) rotateY(45deg); /* Start tilted */
+  animation: rotate-ring-left 10s linear infinite;
+}
+
+/* Interactive Hover State for Rings */
+.orbit-container:hover .ring-horizontal {
+  border-color: #BDD9BF;
+  transform: rotateX(0deg) rotateY(0deg) scale(1.1);
+}
+.orbit-container:hover .ring-diagonal-right {
+  border-color: #BDD9BF;
+  transform: rotateX(0deg) rotateY(0deg) scale(1.25);
+  animation-play-state: paused;
+}
+.orbit-container:hover .ring-diagonal-left {
+  border-color: #BDD9BF;
+  transform: rotateX(0deg) rotateY(0deg) scale(0.9);
+  animation-play-state: paused;
+}
+
+/* Central NU Text Styling */
+.logo-core {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-letter {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 1;
+  color: #FFFDD0; /* Cream Yellow */
+  /* Create the 3D extrusion effect pointing down and to the right */
+  text-shadow: 
+    1px 1px 0px #685369,
+    2px 2px 0px #685369,
+    3px 3px 0px #685369,
+    4px 4px 0px #685369,
+    5px 5px 0px #685369,
+    6px 6px 0px #685369,
+    7px 7px 0px #685369,
+    8px 8px 10px rgba(0,0,0,0.6); /* Cast shadow behind the 3D shape */
+  letter-spacing: -2px;
+}
+
+/* Sparkle element (optional subtle touch) */
+.logo-sparkle {
+  position: absolute;
+  top: 5px;
+  right: -5px;
+  width: 8px;
+  height: 8px;
+  background-color: #F1D471; /* A tiny yellow accent referencing the original */
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+.orbit-container:hover .logo-core {
+  transform: scale(1.15) translateZ(50px);
+}
+
+/* Animations */
+@keyframes rotate-ring-horizontal {
+  0% { transform: rotateX(75deg) rotateZ(0deg); }
+  100% { transform: rotateX(75deg) rotateZ(360deg); }
+}
+
+@keyframes rotate-ring-right {
+  0% { transform: rotateX(60deg) rotateY(-45deg) rotateZ(0deg); }
+  100% { transform: rotateX(60deg) rotateY(-45deg) rotateZ(360deg); }
+}
+
+@keyframes rotate-ring-left {
+  0% { transform: rotateX(50deg) rotateY(45deg) rotateZ(0deg); }
+  100% { transform: rotateX(50deg) rotateY(45deg) rotateZ(360deg); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(45deg); }
+}

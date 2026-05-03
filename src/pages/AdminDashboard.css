@@ -1,0 +1,210 @@
+/* Admin Dashboard Styling */
+@import './StudentHome.css';
+
+/* Override/New styles for Admin Dashboard */
+
+/* Analytics Section */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.stats-card {
+  background: rgba(12, 24, 33, 0.6);
+  border: 1px solid rgba(189, 217, 191, 0.08);
+  padding: 1.25rem;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  transition: border-color 0.2s ease;
+}
+
+.stats-card:hover {
+  border-color: rgba(189, 217, 191, 0.2);
+}
+
+.stats-label {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 0.9rem;
+  color: #92898A;
+  letter-spacing: 1px;
+}
+
+.stats-value {
+  font-family: 'Aldrich', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #BDD9BF;
+  text-shadow: 0 0 15px rgba(189, 217, 191, 0.3);
+}
+
+.stats-trend {
+  font-size: 0.85rem;
+  color: #4CAF50;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Moderation Table/List */
+.moderation-section {
+  margin-top: 3rem;
+}
+
+.moderation-card {
+  background: rgba(22, 66, 91, 0.3);
+  border-left: 4px solid #16425B;
+  margin-bottom: 1rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0 12px 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.moderation-card:hover {
+  background: rgba(22, 66, 91, 0.5);
+}
+
+.moderation-info h4 {
+  margin: 0;
+  font-family: 'Aldrich', sans-serif;
+  color: #BDD9BF;
+}
+
+.moderation-info p {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: #92898A;
+}
+
+.moderation-tag {
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 1rem;
+}
+
+.moderation-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-approve {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-approve:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+.btn-reject {
+  background: rgba(244, 67, 54, 0.2);
+  color: #F44336;
+  border: 1px solid rgba(244, 67, 54, 0.5);
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-reject:hover {
+  background: #F44336;
+  color: white;
+}
+
+/* Charts Placeholder */
+.chart-container {
+  height: 200px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(189, 217, 191, 0.05) 50%, transparent 100%);
+  border-bottom: 2px solid rgba(189, 217, 191, 0.2);
+  position: relative;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.chart-bar {
+  position: absolute;
+  bottom: 0;
+  width: 15px;
+  background: #16425B;
+  border-radius: 4px 4px 0 0;
+  transition: height 1s ease;
+}
+
+/* Status Pills for History */
+
+.status-pill {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-left: 1rem;
+}
+
+.status-pill.approved {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4CAF50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.status-pill.rejected {
+  background: rgba(244, 67, 54, 0.2);
+  color: #F44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* History Card Variations */
+.history-card.approved {
+  border-left-color: #4CAF50;
+}
+
+.history-card.rejected {
+  border-left-color: #F44336;
+}
+
+.btn-restore {
+  background: rgba(189, 217, 191, 0.1);
+  color: #BDD9BF;
+  border: 1px solid rgba(189, 217, 191, 0.3);
+}
+
+.btn-restore:hover {
+  background: #16425B;
+  border-color: #BDD9BF;
+}
+
+.status-label-done {
+  font-size: 0.8rem;
+  color: #92898A;
+  font-style: italic;
+  font-family: 'Nova Square', sans-serif;
+}
+
+.empty-msg {
+  color: #92898A;
+  font-size: 0.9rem;
+  font-family: 'Nova Square', sans-serif;
+  margin-top: 1rem;
+}
+
